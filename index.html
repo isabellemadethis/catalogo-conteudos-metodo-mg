@@ -130,16 +130,6 @@
 <div class="kpis" id="kpis"></div>
 <div class="prod" id="prod"></div>
 
-<details class="alerts">
-  <summary><span class="chev">▶</span> Como ler os vínculos <span class="badge-ac" id="vinccount"></span></summary>
-  <div class="alert-body">
-    <div class="alert-row"><span class="ix">↔</span><span class="tt"><b>Narrativa-mãe "9 anos".</b> <span>A história de origem aparece em 19 peças, em carrossel + reels + stories de propósito — é assim que uma narrativa-âncora sustenta um lançamento. Não é repetição a cortar.</span></span></div>
-    <div class="alert-row"><span class="ix">↔</span><span class="tt"><b>Bordões recorrentes.</b> <span>"Fé+Foco+Disciplina", "não é talento, é decisão" e "ninguém vira referência da noite pro dia" reaparecem em peças diferentes. Repetir bordão é construção de marca.</span></span></div>
-    <div class="alert-row"><span class="ix">↔</span><span class="tt"><b>Eixos temáticos.</b> <span>Peças do mesmo assunto por ângulos diferentes (preparação, selagem, gel, preço). Variação, não cópia.</span></span></div>
-    <div class="alert-row attn"><span class="ix">⚠</span><span class="tt"><b>Único par a revisar: #4 ≈ #20.</b> <span>Os dois são Reels com a mesma copy de origem. #4 fecha com CTA, #20 não. Vale escolher um por janela.</span></span></div>
-  </div>
-</details>
-
 <div class="controls">
   <input class="search" id="q" placeholder="Buscar por título, copy, eixo, arquivo, código (#23, A3·1)…">
   <div class="filterbar" id="filters"></div>
@@ -197,7 +187,6 @@ function renderKpis(){
     [DATA.filter(d=>d.atencao).length,"A revisar","wn"],
   ];
   document.getElementById("kpis").innerHTML=k.map(x=>`<div class="kpi ${x[2]}"><div class="n">${x[0]}</div><div class="l">${x[1]}</div></div>`).join("");
-  document.getElementById("vinccount").textContent=DATA.filter(d=>d.vinculos.length).length+" peças ligadas";
 }
 function renderProd(){
   const counts={pendente:0,concluido:0,reformular:0,descartado:0};
